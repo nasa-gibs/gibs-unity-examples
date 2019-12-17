@@ -1,0 +1,1253 @@
+<?xml version='1.0' encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE WMT_MS_Capabilities SYSTEM "http://schemas.opengis.net/wms/1.1.1/WMS_MS_Capabilities.dtd"
+ [
+ <!ELEMENT VendorSpecificCapabilities EMPTY>
+ ]>  <!-- end of DOCTYPE declaration -->
+
+<WMT_MS_Capabilities version="1.1.1">
+
+<!-- MapServer version 7.0.1 OUTPUT=PNG OUTPUT=JPEG OUTPUT=KML SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE SUPPORTS=ICONV SUPPORTS=WMS_SERVER SUPPORTS=WMS_CLIENT SUPPORTS=WFS_SERVER SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=SOS_SERVER SUPPORTS=THREADS SUPPORTS=GEOS INPUT=JPEG INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE -->
+
+<Service>
+  <Name>OGC:WMS</Name>
+  <Title>NASA Global Imagery Browse Services for EOSDIS</Title>
+  <Abstract>The Global Imagery Browse Services (GIBS) system is a core EOSDIS component which provides a scalable, responsive, highly available, and community standards based set of imagery services. These services are designed with the goal of advancing user interactions with EOSDIS’ inter-disciplinary data through enhanced visual representation and discovery.</Abstract>
+  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?"/>
+  <ContactInformation>
+    <ContactPersonPrimary>
+      <ContactPerson>GIBS User Support</ContactPerson>
+      <ContactOrganization>EOSDIS NASA GIBS</ContactOrganization>
+    </ContactPersonPrimary>
+  <ContactElectronicMailAddress>support@earthdata.nasa.gov</ContactElectronicMailAddress>
+  </ContactInformation>
+  <Fees>none</Fees>
+  <AccessConstraints>none</AccessConstraints>
+</Service>
+
+<Capability>
+  <Request>
+    <GetCapabilities>
+      <Format>application/vnd.ogc.wms_xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetCapabilities>
+    <GetMap>
+      <Format>image/png</Format>
+      <Format>application/vnd.google-earth.kml.xml</Format>
+      <Format>application/vnd.google-earth.kmz</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/png; mode=8bit</Format>
+      <Format>image/tiff</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetMap>
+  </Request>
+  <Exception>
+    <Format>application/vnd.ogc.se_xml</Format>
+    <Format>application/vnd.ogc.se_inimage</Format>
+    <Format>application/vnd.ogc.se_blank</Format>
+  </Exception>
+  <VendorSpecificCapabilities />
+  <UserDefinedSymbolization SupportSLD="1" UserLayer="0" UserStyle="1" RemoteWFS="0"/>
+  <Layer>
+    <Name>NASA_GIBS_EPSG4326_all</Name>
+    <Title>NASA Global Imagery Browse Services for EOSDIS</Title>
+    <Abstract>The Global Imagery Browse Services (GIBS) system is a core EOSDIS component which provides a scalable, responsive, highly available, and community standards based set of imagery services. These services are designed with the goal of advancing user interactions with EOSDIS’ inter-disciplinary data through enhanced visual representation and discovery.</Abstract>
+    <SRS>epsg:4326</SRS>
+    <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+    <BoundingBox SRS="EPSG:4326"
+                minx="-180" miny="-90" maxx="180" maxy="90" />
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Reference_Features</Name>
+        <Title>Reference Features (OSM)</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>MODIS_Fires_All</Name>
+        <Title>MODIS/Aqua-Terra Fires</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>MODIS_Fires_Aqua</Name>
+        <Title>MODIS/Aqua Fires</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>MODIS_Fires_Terra</Name>
+        <Title>MODIS/Terra Fires</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>MODIS_Fires_Terra_Day</Name>
+        <Title>MODIS/Terra Fires Day</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>MODIS_Fires_Terra_Night</Name>
+        <Title>MODIS/Terra Fires Night</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>MODIS_Fires_Aqua_Day</Name>
+        <Title>MODIS/Aqua Fires Day</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>MODIS_Fires_Aqua_Night</Name>
+        <Title>MODIS/Aqua Fires Night</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>MODIS_Fires_Terra_Day_v6</Name>
+        <Title>MODIS/Terra Fires Day (v6)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>MODIS_Fires_Terra_Night_v6</Name>
+        <Title>MODIS/Terra Fires Night (v6)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>MODIS_Fires_Aqua_Day_v6</Name>
+        <Title>MODIS/Aqua Fires Day (v6)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>MODIS_Fires_Aqua_Night_v6</Name>
+        <Title>MODIS/Aqua Fires Night (v6)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>VIIRS_SNPP_Fires_375m_Day</Name>
+        <Title>VIIRS/SNPP Fires Day</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>VIIRS_SNPP_Fires_375m_Night</Name>
+        <Title>VIIRS/SNPP Fires Night</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>VIIRS_SNPP_Fires_375m_Day_v1</Name>
+        <Title>VIIRS/SNPP Fires Day (v1)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>VIIRS_SNPP_Fires_375m_Night_v1</Name>
+        <Title>VIIRS/SNPP Fires Night (v1)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+    </Layer>
+    <Layer>
+      <Name>GPM_Orbit_Dsc</Name>
+      <Title>GPM Orbit Tracks (Descending)</Title>
+      <Abstract>GPM_Orbit_Dsc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=GPM_Orbit_Dsc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>GPM_Orbit_Dsc_Path</Name>
+        <Title>GPM Orbit Tracks (Paths, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>GPM_Orbit_Dsc_Dots</Name>
+        <Title>GPM Orbit Tracks (Dots, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=GPM_Orbit_Dsc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>GPM_Orbit_Asc</Name>
+      <Title>GPM Orbit Tracks (Ascending)</Title>
+      <Abstract>GPM_Orbit_Asc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=GPM_Orbit_Asc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>GPM_Orbit_Asc_Path</Name>
+        <Title>GPM Orbit Tracks (Paths, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>GPM_Orbit_Asc_Dots</Name>
+        <Title>GPM Orbit Tracks (Dots, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=GPM_Orbit_Asc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>SMAP_Orbit_Dsc</Name>
+      <Title>SMAP Orbit Tracks (Descending)</Title>
+      <Abstract>SMAP_Orbit_Dsc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=SMAP_Orbit_Dsc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>SMAP_Orbit_Dsc_Path</Name>
+        <Title>SMAP Orbit Tracks (Paths, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>SMAP_Orbit_Dsc_Dots</Name>
+        <Title>SMAP Orbit Tracks (Dots, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=SMAP_Orbit_Dsc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>SMAP_Orbit_Asc</Name>
+      <Title>SMAP Orbit Tracks (Ascending)</Title>
+      <Abstract>SMAP_Orbit_Asc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=SMAP_Orbit_Asc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>SMAP_Orbit_Asc_Path</Name>
+        <Title>SMAP Orbit Tracks (Paths, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>SMAP_Orbit_Asc_Dots</Name>
+        <Title>SMAP Orbit Tracks (Dots, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=SMAP_Orbit_Asc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>ISS_Orbit_Dsc</Name>
+      <Title>ISS Orbit Tracks (Descending)</Title>
+      <Abstract>ISS_Orbit_Dsc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=ISS_Orbit_Dsc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>ISS_Orbit_Dsc_Path</Name>
+        <Title>ISS Orbit Tracks (Paths, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>ISS_Orbit_Dsc_Dots</Name>
+        <Title>ISS Orbit Tracks (Dots, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=ISS_Orbit_Dsc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>ISS_Orbit_Asc</Name>
+      <Title>ISS Orbit Tracks (Ascending)</Title>
+      <Abstract>ISS_Orbit_Asc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=ISS_Orbit_Asc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>ISS_Orbit_Asc_Path</Name>
+        <Title>ISS Orbit Tracks (Paths, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>ISS_Orbit_Asc_Dots</Name>
+        <Title>ISS Orbit Tracks (Dots, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=ISS_Orbit_Asc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>Cloudsat_Orbit_Dsc</Name>
+      <Title>CloudSat Orbit Tracks (Descending)</Title>
+      <Abstract>Cloudsat_Orbit_Dsc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Cloudsat_Orbit_Dsc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Cloudsat_Orbit_Dsc_Path</Name>
+        <Title>CloudSat Orbit Tracks (Paths, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Cloudsat_Orbit_Dsc_Dots</Name>
+        <Title>CloudSat Orbit Tracks (Dots, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Cloudsat_Orbit_Dsc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>Cloudsat_Orbit_Asc</Name>
+      <Title>CloudSat Orbit Tracks (Ascending)</Title>
+      <Abstract>Cloudsat_Orbit_Asc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Cloudsat_Orbit_Asc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Cloudsat_Orbit_Asc_Path</Name>
+        <Title>Cloudsat Orbit Tracks (Paths, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Cloudsat_Orbit_Asc_Dots</Name>
+        <Title>CloudSat Orbit Tracks (Dots, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Cloudsat_Orbit_Asc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>Aqua_Orbit_Dsc</Name>
+      <Title>Aqua Orbit Tracks (Descending)</Title>
+      <Abstract>Aqua_Orbit_Dsc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Aqua_Orbit_Dsc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Aqua_Orbit_Dsc_Path</Name>
+        <Title>Aqua Orbit Tracks (Paths, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Aqua_Orbit_Dsc_Dots</Name>
+        <Title>Aqua Orbit Tracks (Dots, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Aqua_Orbit_Dsc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>Aqua_Orbit_Asc</Name>
+      <Title>Aqua Orbit Tracks (Ascending)</Title>
+      <Abstract>Aqua_Orbit_Asc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Aqua_Orbit_Asc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Aqua_Orbit_Asc_Path</Name>
+        <Title>Aqua Orbit Tracks (Paths, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Aqua_Orbit_Asc_Dots</Name>
+        <Title>Aqua Orbit Tracks (Dots, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Aqua_Orbit_Asc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>Landsat_8_Orbit_Dsc</Name>
+      <Title>Landsat 8 Orbit Tracks (Descending)</Title>
+      <Abstract>Landsat_8_Orbit_Dsc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Landsat_8_Orbit_Dsc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Landsat_8_Orbit_Dsc_Path</Name>
+        <Title>Landsat 8 Orbit Tracks (Paths, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Landsat_8_Orbit_Dsc_Dots</Name>
+        <Title>Landsat 8 Orbit Tracks (Dots, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Landsat_8_Orbit_Dsc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>Landsat_8_Orbit_Asc</Name>
+      <Title>Landsat 8 Orbit Tracks (Ascending)</Title>
+      <Abstract>Landsat_8_Orbit_Asc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Landsat_8_Orbit_Asc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Landsat_8_Orbit_Asc_Path</Name>
+        <Title>Landsat 8 Orbit Tracks (Paths, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Landsat_8_Orbit_Asc_Dots</Name>
+        <Title>Landsat 8 Orbit Tracks (Dots, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Landsat_8_Orbit_Asc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>Calipso_Orbit_Dsc</Name>
+      <Title>Calipso Orbit Tracks (Descending)</Title>
+      <Abstract>Calipso_Orbit_Dsc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Calipso_Orbit_Dsc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Calipso_Orbit_Dsc_Path</Name>
+        <Title>Calipso Orbit Tracks (Paths, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Calipso_Orbit_Dsc_Dots</Name>
+        <Title>Calipso Orbit Tracks (Dots, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Calipso_Orbit_Dsc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>Calipso_Orbit_Asc</Name>
+      <Title>Calipso Orbit Tracks (Ascending)</Title>
+      <Abstract>Calipso_Orbit_Asc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Calipso_Orbit_Asc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Calipso_Orbit_Asc_Path</Name>
+        <Title>Calipso Orbit Tracks (Paths, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Calipso_Orbit_Asc_Dots</Name>
+        <Title>Calipso Orbit Tracks (Dots, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Calipso_Orbit_Asc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>GOSAT_Orbit_Dsc</Name>
+      <Title>GOSAT Orbit Tracks (Descending)</Title>
+      <Abstract>GOSAT_Orbit_Dsc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=GOSAT_Orbit_Dsc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>GOSAT_Orbit_Dsc_Path</Name>
+        <Title>GOSAT Orbit Tracks (Paths, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>GOSAT_Orbit_Dsc_Dots</Name>
+        <Title>GOSAT Orbit Tracks (Dots, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=GOSAT_Orbit_Dsc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>GOSAT_Orbit_Asc</Name>
+      <Title>GOSAT Orbit Tracks (Ascending)</Title>
+      <Abstract>GOSAT_Orbit_Asc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=GOSAT_Orbit_Asc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>GOSAT_Orbit_Asc_Path</Name>
+        <Title>GOSAT Orbit Tracks (Paths, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>GOSAT_Orbit_Asc_Dots</Name>
+        <Title>GOSAT Orbit Tracks (Dots, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=GOSAT_Orbit_Asc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>Aura_Orbit_Dsc</Name>
+      <Title>Aura Orbit Tracks (Descending)</Title>
+      <Abstract>Aura_Orbit_Dsc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Aura_Orbit_Dsc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Aura_Orbit_Dsc_Path</Name>
+        <Title>Aura Orbit Tracks (Paths, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Aura_Orbit_Dsc_Dots</Name>
+        <Title>Aura Orbit Tracks (Dots, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Aura_Orbit_Dsc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>Aura_Orbit_Asc</Name>
+      <Title>Aura Orbit Tracks (Ascending)</Title>
+      <Abstract>Aura_Orbit_Asc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Aura_Orbit_Asc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Aura_Orbit_Asc_Path</Name>
+        <Title>Aura Orbit Tracks (Paths, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Aura_Orbit_Asc_Dots</Name>
+        <Title>Aura Orbit Tracks (Dots, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Aura_Orbit_Asc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>Suomi_NPP_Orbit_Dsc</Name>
+      <Title>Suomi NPP Orbit Tracks (Descending)</Title>
+      <Abstract>Suomi_NPP_Orbit_Dsc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Suomi_NPP_Orbit_Dsc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Suomi_NPP_Orbit_Dsc_Path</Name>
+        <Title>Suomi NPP Orbit Tracks (Paths, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Suomi_NPP_Orbit_Dsc_Dots</Name>
+        <Title>Suomi NPP Orbit Tracks (Dots, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Suomi_NPP_Orbit_Dsc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>Suomi_NPP_Orbit_Asc</Name>
+      <Title>Suomi NPP Orbit Tracks (Ascending)</Title>
+      <Abstract>Suomi_NPP_Orbit_Asc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Suomi_NPP_Orbit_Asc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Suomi_NPP_Orbit_Asc_Path</Name>
+        <Title>Suomi NPP Orbit Tracks (Paths, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Suomi_NPP_Orbit_Asc_Dots</Name>
+        <Title>Suomi NPP Orbit Tracks (Dots, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Suomi_NPP_Orbit_Asc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>Terra_Orbit_Dsc</Name>
+      <Title>Terra Orbit Tracks (Descending)</Title>
+      <Abstract>Terra_Orbit_Dsc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Terra_Orbit_Dsc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Terra_Orbit_Dsc_Path</Name>
+        <Title>Terra Orbit Tracks (Paths, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Terra_Orbit_Dsc_Dots</Name>
+        <Title>Terra Orbit Tracks (Dots, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Terra_Orbit_Dsc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>Terra_Orbit_Asc</Name>
+      <Title>Terra Orbit Tracks (Ascending)</Title>
+      <Abstract>Terra_Orbit_Asc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Terra_Orbit_Asc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Terra_Orbit_Asc_Path</Name>
+        <Title>Terra Orbit Tracks (Paths, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Terra_Orbit_Asc_Dots</Name>
+        <Title>Terra Orbit Tracks (Dots, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=Terra_Orbit_Asc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>GCOM_W1_Orbit_Dsc</Name>
+      <Title>GCOM-W1 Orbit Tracks (Descending)</Title>
+      <Abstract>GCOM_W1_Orbit_Dsc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=GCOM_W1_Orbit_Dsc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>GCOM_W1_Orbit_Dsc_Path</Name>
+        <Title>GCOM-W1 Orbit Tracks (Paths, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>GCOM_W1_Orbit_Dsc_Dots</Name>
+        <Title>GCOM-W1 Orbit Tracks (Dots, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=GCOM_W1_Orbit_Dsc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>GCOM_W1_Orbit_Asc</Name>
+      <Title>GCOM-W1 Orbit Tracks (Ascending)</Title>
+      <Abstract>GCOM_W1_Orbit_Asc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=GCOM_W1_Orbit_Asc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>GCOM_W1_Orbit_Asc_Path</Name>
+        <Title>GCOM-W1 Orbit Tracks (Paths, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>GCOM_W1_Orbit_Asc_Dots</Name>
+        <Title>GCOM-W1 Orbit Tracks (Dots, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=GCOM_W1_Orbit_Asc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>OCO_2_Orbit_Dsc</Name>
+      <Title>OCO-2 Orbit Tracks (Descending)</Title>
+      <Abstract>OCO_2_Orbit_Dsc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=OCO_2_Orbit_Dsc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>OCO_2_Orbit_Dsc_Path</Name>
+        <Title>OCO-2 Orbit Tracks (Paths, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>OCO_2_Orbit_Dsc_Dots</Name>
+        <Title>OCO-2 Orbit Tracks (Dots, Descending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=OCO_2_Orbit_Dsc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>OCO_2_Orbit_Asc</Name>
+      <Title>OCO-2 Orbit Tracks (Ascending)</Title>
+      <Abstract>OCO_2_Orbit_Asc</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="113" height="35">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=OCO_2_Orbit_Asc&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>OCO_2_Orbit_Asc_Path</Name>
+        <Title>OCO-2 Orbit Tracks (Paths, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>OCO_2_Orbit_Asc_Dots</Name>
+        <Title>OCO-2 Orbit Tracks (Dots, Ascending)</Title>
+        <LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-180" miny="-90" maxx="180" maxy="90" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="35">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gibs.earthdata.nasa.gov/wms/epsg4326/all/wms.cgi?version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=OCO_2_Orbit_Asc_Dots&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>energy-pop-exposure-nuclear-plants-locations_plants</Name>
+        <Title>Energy: Nuclear Power Plant Locations</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-33.968" miny="-124.209" maxx="68.0507" maxy="166.54" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-33.968" miny="-124.209" maxx="68.0507" maxy="166.54" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>grand-v1-dams-rev01</Name>
+        <Title>Global Reservoir and Dam Database: Dams</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-45.88" miny="-153.027" maxx="70.387" maxy="176.815" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-45.88" miny="-153.027" maxx="70.387" maxy="176.815" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>grand-v1-reservoirs-rev01</Name>
+        <Title>Global Reservoir and Dam Database: Reservoirs</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-45.881" miny="-153.037" maxx="70.398" maxy="176.825" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-45.881" miny="-153.037" maxx="70.398" maxy="176.825" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>grump-v1-population-count_2000</Name>
+        <Title>GRUMP v1: Population Count 2000</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-170.1" miny="-183.6" maxx="197.1" maxy="183.6" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-170.1" miny="-183.6" maxx="197.1" maxy="183.6" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>grump-v1-settlement-points</Name>
+        <Title>GRUMP v1: Settlement Points</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-54.8" miny="-178.174" maxx="78.93" maxy="179.853" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-54.8" miny="-178.174" maxx="78.93" maxy="179.853" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>grump-v1-urban-extents</Name>
+        <Title>GRUMP v1: Urban Extents</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-57" miny="-180" maxx="84" maxy="180" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-57" miny="-180" maxx="84" maxy="180" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>lecz-urban-rural-population-land-area-estimates-v2_urban-rural-zones-10m</Name>
+        <Title>Urban Rural Extents in the 10m Low Elevation Zone</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-57" miny="-180" maxx="84" maxy="180" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-57" miny="-180" maxx="84" maxy="180" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>lulc-global-mangrove-forests-distribution-2000</Name>
+        <Title>Global Mangrove Forests Distribution, 2000</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-38.7978" miny="-179.857" maxx="31.3711" maxy="179.462" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-38.7978" miny="-179.857" maxx="31.3711" maxy="179.462" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>ndh-cyclone-hazard-frequency-distribution</Name>
+        <Title>Cyclone Hazard Frequency and Distribution</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-57" miny="-180" maxx="72.02" maxy="180" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-57" miny="-180" maxx="72.02" maxy="180" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>ndh-cyclone-mortality-risks-distribution</Name>
+        <Title>Cyclone Mortality Risks and Distribution</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-58.015" miny="-180" maxx="85.016" maxy="180" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-58.015" miny="-180" maxx="85.016" maxy="180" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>ndh-cyclone-proportional-economic-loss-risk-deciles</Name>
+        <Title>Cyclone Proportional Economic Loss Risk Deciles</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-58.015" miny="-179.998" maxx="85.016" maxy="179.998" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-58.015" miny="-179.998" maxx="85.016" maxy="179.998" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>ndh-drought-hazard-frequency-distribution</Name>
+        <Title>Drought Hazard Frequency and Distribution</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-90" miny="-180" maxx="90" maxy="180" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-90" miny="-180" maxx="90" maxy="180" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>ndh-drought-mortality-risks-distribution</Name>
+        <Title>Drought Mortality Risks and Distribution</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-58.015" miny="-179.998" maxx="85.016" maxy="179.998" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-58.015" miny="-179.998" maxx="85.016" maxy="179.998" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>ndh-drought-proportional-economic-loss-risk-deciles</Name>
+        <Title>Drought Proportional Economic Loss Risk Deciles</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-58.015" miny="-179.998" maxx="85.016" maxy="179.998" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-58.015" miny="-179.998" maxx="85.016" maxy="179.998" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>ndh-flood-hazard-frequency-distribution</Name>
+        <Title>Flood Hazard Frequency and Distribution</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-58" miny="-180" maxx="85" maxy="180" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-58" miny="-180" maxx="85" maxy="180" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>ndh-flood-mortality-risks-distribution</Name>
+        <Title>Flood Mortality Risks and Distribution</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-58.015" miny="-179.998" maxx="85.016" maxy="179.998" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-58.015" miny="-179.998" maxx="85.016" maxy="179.998" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>ndh-flood-proportional-economic-loss-risk-deciles</Name>
+        <Title>Flood Proportional Economic Loss Risk Deciles</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-58.015" miny="-179.998" maxx="85.016" maxy="179.998" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-58.015" miny="-179.998" maxx="85.016" maxy="179.998" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>ndh-volcano-hazard-frequency-distribution</Name>
+        <Title>Volcano Hazard Frequency and Distribution</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-58" miny="-180" maxx="85" maxy="180" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-58" miny="-180" maxx="85" maxy="180" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>ndh-volcano-mortality-risks-distribution</Name>
+        <Title>Volcano Mortality Risks and Distribution</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-58.015" miny="-179.998" maxx="85.016" maxy="179.998" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-58.015" miny="-179.998" maxx="85.016" maxy="179.998" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>ndh-volcano-proportional-economic-loss-risk-deciles</Name>
+        <Title>Volcano Proportional Economic Loss Risk Deciles</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-58.015" miny="-179.998" maxx="85.016" maxy="179.998" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="-58.015" miny="-179.998" maxx="85.016" maxy="179.998" />
+    </Layer>
+  </Layer>
+</Capability>
+</WMT_MS_Capabilities>

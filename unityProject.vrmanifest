@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.vrtest1.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "D:\\workspace\\gibs-unity-examples\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "vr-test-1 [Testing]"
+        }
+      }
+    }
+  ]
+}
