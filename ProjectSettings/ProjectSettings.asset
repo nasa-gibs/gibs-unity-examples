@@ -636,11 +636,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: gibsUnityExamples
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 80939cea6332d701
   metroApplicationDescription: v5
   wsaImages: {}
   metroTileShortName: 
