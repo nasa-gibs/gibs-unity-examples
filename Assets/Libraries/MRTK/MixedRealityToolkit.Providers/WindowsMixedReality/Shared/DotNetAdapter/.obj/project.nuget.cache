@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "MgnoHuAAhMaW7J0d5UCpg/rDtfhpDaPM1W1wOEN0cdqQsliTwy9iH3S+HKPRQ/N/X8Jq3EhWtdaKkvW5zipA8Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Angel\\Documents\\workspace\\GIBS Unity Examples\\gibs-unity-examples\\Assets\\Libraries\\MRTK\\MixedRealityToolkit.Providers\\WindowsMixedReality\\Shared\\DotNetAdapter\\DotNetAdapter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Angel\\.nuget\\packages\\microsoft.windows.mixedreality.dotnetwinrt\\0.5.1045\\microsoft.windows.mixedreality.dotnetwinrt.0.5.1045.nupkg.sha512",
+    "C:\\Users\\Angel\\.nuget\\packages\\system.drawing.primitives\\4.3.0\\system.drawing.primitives.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
