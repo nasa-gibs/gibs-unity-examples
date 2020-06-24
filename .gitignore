@@ -61,3 +61,9 @@ crashlytics-build.properties
 *Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.ConfigurationChecker.asmdef*
 
 .DS_Store
+.MSBuildForUnity.Common.props
+MSBuild/
+Assets/Libraries/MRTK
+MixedRealityToolkit.Providers/
+WindowsMixedReality/Shared/
+DotNetAdapter/.obj
