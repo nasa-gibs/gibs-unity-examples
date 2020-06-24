@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using Debug = UnityEngine.Debug;
 
-public class airsParser : MonoBehaviour
+public class airsParser
 {
     public static airsFile MetadataFromPath(string path)
     {
@@ -23,21 +23,14 @@ public class airsParser : MonoBehaviour
                 switch (items[0])
                 {
                     case "comment":
-                        if (items[1] == "x_label:")
-                            dataFile.x = items[2];
-                        if (items[1] == "y_label:")
-                            dataFile.y = items[2];
-                        if (items[1] == "z_label:")
-                            dataFile.z = items[2];
-                        if (items[1] == "val_label:")
-                            dataFile.val = items[2];
-                        if (items[1] == "min_val:")
-                        break;
-                    case "element":
-                        if (items[1] == "vertex")
-                            dataFile.vertexCount = int.Parse(items[2]);
-                        if (items[1] == "face")
-                            dataFile.triangleCount = int.Parse(items[2]);
+                        if (items[1] == "x")
+                            dataFile.x = float.Parse(items[2]);
+                        if (items[1] == "y")
+                            dataFile.y = float.Parse(items[2]);
+                        if (items[1] == "z")
+                            dataFile.z = float.Parse(items[2]);
+                        if (items[1] == "val")
+                            dataFile.val = float.Parse(items[2]);
                         break;
                 }
             }
