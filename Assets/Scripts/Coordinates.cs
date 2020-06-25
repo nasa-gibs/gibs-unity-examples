@@ -41,7 +41,6 @@ public static class Coordinates {
 	{
 		// Expand the sphereRadius to include the elevation
 		float sphereRadiusExtended = ((elevation * elevationScale + actualRadius) / actualRadius) * sphereRadius;
-		Debug.Log(sphereRadiusExtended);
 		// Use LatLongToSpherical to get our spherical coordinates
 		Vector3 spherical = LatLongToSpherical(latitude, longitude, sphereRadiusExtended);
 
@@ -91,6 +90,13 @@ public static class Coordinates {
 		return new Vector3(latitude, longitude, sphereRadius);
 	}
 
+	// Overload
+	// Same as above but takes a Vector3 to make things simpler for other scripts.
+	public static Vector3 XYZToLatLong(Vector3 xyz)
+	{
+		return XYZToLatLong(xyz.x, xyz.y, xyz.z);
+	}
+
 
 	// Converts latitude and longitude to spherical coordinates (radius, polar angle (theta), azimuthal angle (phi))
 	public static Vector3 LatLongToSpherical(float latitude, float longitude, float sphereRadius)
@@ -121,7 +127,10 @@ public static class Coordinates {
 	{
 		float sphereRadius = Mathf.Sqrt (x * x + y * y + z * z);
 		float theta = Mathf.Acos (y / sphereRadius);
-		float phi = Mathf.Atan (z / x);
+		float phi = Mathf.Atan(z / x);
+		if (float.IsNaN(phi)) {
+			phi = Mathf.Atan2 (z, x);
+		}
 		return new Vector3(sphereRadius, theta, phi);
 	}
 }
