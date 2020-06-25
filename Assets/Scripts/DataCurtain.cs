@@ -87,8 +87,6 @@ public class DataCurtain : MonoBehaviour {
 		// Assign our new material to our vertical profile
 		profile.GetComponent<MeshRenderer>().material = profileMat;
 
-		Debug.Log(profile.GetComponent<MeshRenderer>().material);
-
 		// Add our new material to our list of materials we need to destroy at the end
 		materials.Add(profileMat);
 
