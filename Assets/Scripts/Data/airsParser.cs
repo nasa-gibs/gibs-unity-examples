@@ -14,10 +14,11 @@ public class airsParser
         dataFile.path = path;
 
         string[] airsOutput = File.ReadAllLines(path);
+        
         // Get AIRS values
         foreach (string currentLine in airsOutput)
         {
-            string[] items = currentLine.Split(null, 3);
+            string[] items = currentLine.Split(null, 4);
             if (items != null && items.Length > 0)
             {
                 switch (items[0])

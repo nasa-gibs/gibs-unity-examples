@@ -9,8 +9,8 @@ public class airsFile {
     public string fileName;
     public string identifier;
 
-    public float x;
-    public float y;
-    public float z;
-    public float val;
+    public float[] x;
+    public float[] y;
+    public float[] z;
+    public float[] val;
 }
