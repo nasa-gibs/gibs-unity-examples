@@ -9,8 +9,9 @@ public class CSVParser
     //data reader for extracting x, y, z, and val data from a csv file
     public static SerialData AirsReader()
     {
+        string path = Application.dataPath + "/airs.csv";
         SerialData airsData = new SerialData();
-        string[] airsOutput = File.ReadAllLines(Application.dataPath + "/airs.csv");
+        string[] airsOutput = File.ReadAllLines(path);
         bool headerFlag = true;
         
         foreach (string currentLine in airsOutput)
