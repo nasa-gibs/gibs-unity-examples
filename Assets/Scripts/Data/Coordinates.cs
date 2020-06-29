@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
-public static class Coordinates {
+public class Coordinates {
 
+	SerialData airsData = CSVParser.AirsReader();
 	// Convert latitude and longitude to XYZ world coordinates.
 	// Assume sphere is located at the origin.
 	public static Vector3 LatLongToXYZ(float latitude, float longitude, float sphereRadius)
