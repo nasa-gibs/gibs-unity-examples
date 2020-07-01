@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public class SerialData
 {
     // takes in data for x, y, z, and color value respectively
-    public List<float> latitude = new List<float>();
-    public List<float> longitude = new List<float>();
-    public List<float> sphereRadius = new List<float>();
+    public List<float> x = new List<float>();
+    public List<float> y = new List<float>();
+    public List<float> z = new List<float>();
     public List<float> val = new List<float>();
 }

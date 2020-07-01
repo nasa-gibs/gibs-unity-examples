@@ -180,7 +180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120167343}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.38}
+  m_LocalPosition: {x: 0, y: 0, z: 0.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 31311794}
@@ -260,7 +260,7 @@ Camera:
   m_GameObject: {fileID: 120167343}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -355,7 +355,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Created by NASA JPL''s Data Space
 
-    Developed by Brian "Angel" Lim
+    Developed by Brian "Angel" Lim and Matthew Gaber
 
     Mentored by Joe T. Roberts
 
@@ -2674,7 +2674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d9acc7968244a8886f3af591305bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeProfile: {fileID: 11400000, guid: 31a611a779d3499e8e35f1a2018ca841, type: 2}
+  activeProfile: {fileID: 11400000, guid: 7e7c962b9eb9dfa44993d5b2f2576752, type: 2}
 --- !u!4 &2103622114
 Transform:
   m_ObjectHideFlags: 0
@@ -14825,7 +14825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4943773360297028205}
   m_LocalRotation: {x: 0.019069606, y: -0, z: -0, w: 0.9998182}
-  m_LocalPosition: {x: -0.062, y: -0.159, z: 0.34}
+  m_LocalPosition: {x: -0.062, y: -0.159, z: 0.765}
   m_LocalScale: {x: 1.6743793, y: 1.6743793, z: 1.6743793}
   m_Children:
   - {fileID: 1250233341}

@@ -4,12 +4,12 @@ using UnityEngine;
 using System.IO;
 using Debug = UnityEngine.Debug;
 
+//data reader for extracting x, y, z, and val data from a csv file
 public class CSVParser
 {
-    //data reader for extracting x, y, z, and val data from a csv file
     public static SerialData AirsReader()
     {
-        string path = Application.dataPath + "/airs.csv";
+        string path = Application.dataPath + "/Data/output/airs.csv";
         SerialData airsData = new SerialData();
         string[] airsOutput = File.ReadAllLines(path);
         bool headerFlag = true;
@@ -25,9 +25,9 @@ public class CSVParser
                 continue;
             }
 
-            airsData.longitude.Add(float.Parse(items[0]));
-            airsData.latitude.Add(float.Parse(items[1]));
-            airsData.sphereRadius.Add(float.Parse(items[2]));
+            airsData.x.Add(float.Parse(items[0]));
+            airsData.y.Add(float.Parse(items[1]));
+            airsData.z.Add(float.Parse(items[2]));
             airsData.val.Add(float.Parse(items[3]));
         }
         return airsData;
