@@ -23,7 +23,7 @@ public class SphereLinePlot : MonoBehaviour
     // points[i].y is longitude
     // points[i].z is height/elevation
     // `elevationScale` will be used in determining XYZ world coordinates, defaults to 10 if not specified
-    public void Plot(Vector3[] points, float elevationScale = 1000)
+    public void Plot(Vector3[] points, float elevationScale = 10)
     {
         LineRenderer line = CreateLine(points.Length);
 
@@ -38,13 +38,13 @@ public class SphereLinePlot : MonoBehaviour
     }
 
 
-    // Overload that Plots data in a line plot as-is.
+    // Plots data in a line plot as-is.
     // Doesn't convert from lat/long to global XYZ coordinates
     // `points` is an array of Vector3's
     // points[i].x is x-coordinate
     // points[i].y is y-coordinate
     // points[i].z is z-coordinate
-    public void Plot(Vector3[] points)
+    public void PlotAsIs(Vector3[] points)
     {
         LineRenderer line = CreateLine(points.Length);
         line.SetPositions(points);
