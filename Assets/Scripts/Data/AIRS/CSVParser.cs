@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using Debug = UnityEngine.Debug;
 
-//data reader for extracting x, y, z, and val data from a csv file
+//Data reader for extracting x, y, z, and val data from a csv file
 public class CSVParser
 {
     public static SerialData AirsReader()
