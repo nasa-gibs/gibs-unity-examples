@@ -396,5 +396,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startCoords: []
   endCoords: []
-  profiles: []
+  profiles: {fileID: 0}
+  curtain: {fileID: 0}
+--- !u!114 &1418241362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418241359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8e54fc1a4a51544ca4bfb5f3adc8ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCoords: []
+  endCoords: []
+  profiles: {fileID: 0}
   curtain: {fileID: 0}
