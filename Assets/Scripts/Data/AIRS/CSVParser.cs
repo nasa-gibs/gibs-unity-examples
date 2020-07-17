@@ -7,10 +7,10 @@ using Debug = UnityEngine.Debug;
 //Data reader for extracting x, y, z, and val data from a csv file
 public class CSVParser
 {
-    public static SerialData AirsReader()
+    public static CSVData AirsReader()
     {
         string path = Application.dataPath + "/Data/output/airs.csv";
-        SerialData airsData = new SerialData();
+        CSVData airsData = new CSVData();
         string[] airsOutput = File.ReadAllLines(path);
         bool headerFlag = true;
         

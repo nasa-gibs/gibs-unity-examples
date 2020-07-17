@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Assists GeojsonParser.cs with deserializing arrays of geojson data
+//Assists GeojsonParser.cs with deserializing arrays of geojson objects
 public static class GeojsonHelper
 {
     public static T[] FromJson<T>(string json)

@@ -11,7 +11,7 @@ public class AirsRender : MonoBehaviour
 
     void Awake()
     {
-        SerialData airsData = CSVParser.AirsReader();
+        CSVData airsData = CSVParser.AirsReader();
         int dataLength = airsData.x.Count;
         dataPoint = new GameObject[dataLength];
 
@@ -38,25 +38,26 @@ public class AirsRender : MonoBehaviour
     {
         //Applies color depending on val value of the datapoint
         if (colorValue > 0.0F && colorValue < 10.0F)
-            airsRenderer.material.SetColor("_Color", Color.red);
+            airsRenderer.material.SetColor("_Color", new Color(0,0,255)); //dark blue
         if (colorValue > 10.0F && colorValue < 20.0F)
-            airsRenderer.material.SetColor("_Color", Color.magenta);
+            airsRenderer.material.SetColor("_Color", new Color(0,128,255)); //light blue
         if (colorValue > 20.0F && colorValue < 30.0F)
-            airsRenderer.material.SetColor("_Color", Color.yellow);
+            airsRenderer.material.SetColor("_Color", new Color(0,255,255)); //cyan
         if (colorValue > 30.0F && colorValue < 40.0F)
-            airsRenderer.material.SetColor("_Color", Color.green);
+            airsRenderer.material.SetColor("_Color", new Color(0,255,128)); //green 1
         if (colorValue > 40.0F && colorValue < 50.0F)
-            airsRenderer.material.SetColor("_Color", Color.cyan);
+            airsRenderer.material.SetColor("_Color", new Color(128,255,0)); //green 2
         if (colorValue > 50.0F && colorValue < 60.0F)
-            airsRenderer.material.SetColor("_Color", Color.blue);
+            airsRenderer.material.SetColor("_Color", new Color(255,255,0)); //yellow
         if (colorValue > 60.0F && colorValue < 70.0F)
-            airsRenderer.material.SetColor("_Color", Color.black);
+            airsRenderer.material.SetColor("_Color", new Color(255,128,0)); //orange
         if (colorValue > 70.0F && colorValue < 80.0F)
-            airsRenderer.material.SetColor("_Color", Color.gray);
+            airsRenderer.material.SetColor("_Color", new Color(255,0,0)); //red
         if (colorValue > 80.0F && colorValue < 90.0F)
-            airsRenderer.material.SetColor("_Color", Color.grey);
+            airsRenderer.material.SetColor("_Color", new Color(255,0,127)); //magenta
         if (colorValue > 90.0F && colorValue < 100.0F)
-            airsRenderer.material.SetColor("_Color", Color.white);
+            airsRenderer.material.SetColor("_Color", new Color(127,0,255)); //violet
     }
 
 }
+
