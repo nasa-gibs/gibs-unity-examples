@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CalipsoInstantiator : MonoBehaviour
 {
-    GeojsonData calipsoData = GeojsonParser.CalipsoReader();
     public Vector2[] startCoords;
     public Vector2[] endCoords;
     public Texture profiles;
@@ -13,6 +12,8 @@ public class CalipsoInstantiator : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        GeojsonData calipsoData = GeojsonParser.CalipsoReader();
+
         for (int i = 0; i < calipsoData.features.Length; i++)
         {
             profiles = Resources.Load <Texture> (calipsoData.features[i].properties.img);

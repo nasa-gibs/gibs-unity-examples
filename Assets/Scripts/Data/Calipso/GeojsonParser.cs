@@ -9,7 +9,7 @@ public class GeojsonParser
 {
     public static GeojsonData CalipsoReader() 
     {
-        string path = Application.dataPath + "Data/output/calipso.geojson";
+        string path = Application.dataPath + "/Data/output/calipso.geojson";
         string jsonString = File.ReadAllText(path);
         GeojsonData calipsoData = JsonUtility.FromJson<GeojsonData>(jsonString);
 
