@@ -11,7 +11,8 @@ public class AirsRender : MonoBehaviour
 
     void Awake()
     {
-        CSVData airsData = CSVParser.AirsReader();
+        string path = Application.dataPath + "/Data/output/airs.csv";
+        CSVData airsData = CSVParser.Reader(path);
         int dataLength = airsData.x.Count;
         dataPoint = new GameObject[dataLength];
 

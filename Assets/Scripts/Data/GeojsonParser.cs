@@ -7,12 +7,11 @@ using UnityEngine;
 
 public class GeojsonParser 
 {
-    public static GeojsonData CalipsoReader() 
+    public static GeojsonData Reader(string path) 
     {
-        string path = Application.dataPath + "/Data/output/calipso.geojson";
         string jsonString = File.ReadAllText(path);
-        GeojsonData calipsoData = JsonUtility.FromJson<GeojsonData>(jsonString);
+        GeojsonData data = JsonUtility.FromJson<GeojsonData>(jsonString);
 
-        return calipsoData;
+        return data;
     }
 }
