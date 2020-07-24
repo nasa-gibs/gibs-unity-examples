@@ -26,16 +26,16 @@ public class AirsRender : MonoBehaviour
             
             float sphereRadius = GetComponent<SphereCollider>().radius;
             float actualRadius = 3948.8F;
-            float elevationScale = .70F;
+            float elevationScale = .05F;
 
-            colorPoints(airsRenderer, colorValue);
+            ColorPoints(airsRenderer, colorValue);
             Vector3 airsCords = Coordinates.LatLongToXYZ(airsData.x[i], airsData.y[i], airsData.z[i], actualRadius, sphereRadius, elevationScale);
             Instantiate(dataPoint[i], transform.position + airsCords, Quaternion.identity);
             //dataPoint[i].transform.parent = gibsObject.transform;
         }
     }
 
-    void colorPoints(Renderer airsRenderer, float colorValue)
+    void ColorPoints(Renderer airsRenderer, float colorValue)
     {
         //Applies color depending on val value of the datapoint
         if (colorValue > 0.0F && colorValue < 10.0F)
@@ -58,6 +58,8 @@ public class AirsRender : MonoBehaviour
             airsRenderer.material.SetColor("_Color", new Color(255,0,127)); //magenta
         if (colorValue > 90.0F && colorValue < 100.0F)
             airsRenderer.material.SetColor("_Color", new Color(127,0,255)); //violet
+        if (colorValue > 100.0F && colorValue < 120.0F)
+            airsRenderer.material.SetColor("_Color", new Color(207,90,255)); //pink
     }
 
 }
