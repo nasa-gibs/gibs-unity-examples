@@ -15,9 +15,8 @@ public class GeojsonParser
         //Reads filepath passed from an instantiator script, validates if file was read correctl
         if (File.Exists(path))
         {
+            Debug.Log(path);
             string jsonString = File.ReadAllText(path);
-            Debug.Log("File Path: " + path);
-            Debug.Log(jsonString);
             data = JsonUtility.FromJson<GeojsonData>(jsonString);
 
             //Checks to make sure that the Geojson data was deserialized correctly

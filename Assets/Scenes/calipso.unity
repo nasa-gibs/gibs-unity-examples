@@ -394,5 +394,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e54fc1a4a51544ca4bfb5f3adc8ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profiles: {fileID: 0}
   curtain: {fileID: 1418241360}
+  profiles:
+  - {fileID: 2800000, guid: 80f25c99085196a4e951deab79ea0331, type: 3}
+  - {fileID: 2800000, guid: 0b6f03056d706e648a03211b205ef922, type: 3}
+  - {fileID: 2800000, guid: 88f897136cfb62445bed8778c5bb27fc, type: 3}
+  - {fileID: 2800000, guid: c14b4e8e1bc097440a9feac5fc5b787b, type: 3}
+  - {fileID: 2800000, guid: f3ad7c4706cb79c4fbb9aaf21697a681, type: 3}
+  - {fileID: 2800000, guid: b9dfebbe26e1f6e47b136cd2df187881, type: 3}
