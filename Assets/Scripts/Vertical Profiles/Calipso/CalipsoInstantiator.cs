@@ -18,7 +18,6 @@ public class CalipsoInstantiator : MonoBehaviour
 
         for (int i = 0; i < calipsoData.features.Count; i++)
         {
-            //profiles = Resources.Load<Texture>("/Data/" + calipsoData.features[i].properties.img);
             curtain.Generate(calipsoData.features[i].properties.y_range[0], calipsoData.features[i].properties.x_range[0], calipsoData.features[i].properties.y_range[1], calipsoData.features[i].properties.x_range[1], profiles[i]);
         }
     }

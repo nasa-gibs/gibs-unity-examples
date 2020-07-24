@@ -23,12 +23,13 @@ public class Feature
 public class Geometry
 {
     public string type;
-    public List<List<float>> coordinates;
+    public List<float> coordinates;
 }
 
 [Serializable]
 public class Properties
 {
+    //Calipso Fields
     public List<float> x_range;
     public string img;
     public string start_time;
@@ -36,6 +37,10 @@ public class Properties
     public string csv;
     public List<float> y_range;
     public List<int> z_range;
+
+    //ICESat-2 Fields
+    public float height;
+    public float time_delta; 
 }
 
 

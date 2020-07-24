@@ -14,7 +14,7 @@ public class CSVParser
         //Reads data passed from instantiator script, validates if file was read correctly
         if (File.Exists(path))
         {
-            Debug.Log(path);
+            Debug.Log("CSV File Loaded: " + path);
             string[] csvString = File.ReadAllLines(path);
             bool headerFlag = true;
 

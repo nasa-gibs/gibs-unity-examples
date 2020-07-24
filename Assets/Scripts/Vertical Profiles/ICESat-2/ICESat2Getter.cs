@@ -11,6 +11,8 @@ public class ICESat2Getter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        string path = Application.dataPath + "/Resources/Data/output/icesat2.geojson";
+        GeojsonData iceData = GeojsonParser.Reader(path);
         // Example data
         GetICESat2Data("2018-11-13", 31, 32, 79, 80, "gt1r", 706);
     }
