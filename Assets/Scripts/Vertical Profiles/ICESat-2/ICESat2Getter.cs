@@ -11,8 +11,6 @@ public class ICESat2Getter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string path = Application.dataPath + "/Resources/Data/output/icesat2.geojson";
-        GeojsonData iceData = GeojsonParser.Reader(path);
         // Example data
         GetICESat2Data("2018-11-13", 31, 32, 79, 80, "gt1r", 706);
     }
@@ -58,6 +56,7 @@ public class ICESat2Getter : MonoBehaviour
             // Initialize list of ICESat-2 points
             List<Vector3> pointsList = new List<Vector3>();
 
+            //handles large data mass, only renders 1 out of 1000 points
             for (int i = 1; i < rows.Length; i++)
             {
                 if (i % 1000 == 0) // Take 1 out of every 1000 points

@@ -382,7 +382,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linePlot: {fileID: 1979213703}
-  iceVector: []
 --- !u!114 &1979213703
 MonoBehaviour:
   m_ObjectHideFlags: 0
