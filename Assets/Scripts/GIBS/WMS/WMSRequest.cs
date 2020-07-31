@@ -1,4 +1,6 @@
-﻿public class WMSRequest
+﻿using System.Reflection;
+
+public class WMSRequest
 {
     public readonly string server;
     public readonly string layer;
