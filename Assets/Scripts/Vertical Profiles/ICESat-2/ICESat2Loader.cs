@@ -18,11 +18,11 @@ public class ICESat2Loader : MonoBehaviour
         //Creates and initializes a Vector3 with values from ICESat-2 data object
         for (int i = 0; i < iceData.features.Count; i++)
         {
-            iceVector[i] = new Vector3(iceData.features[i].geometry.coordinates[0], iceData.features[i].geometry.coordinates[1], iceData.features[i].properties.height);
+            iceVector[i] = new Vector3(iceData.features[i].geometry.coordinates[1], iceData.features[i].geometry.coordinates[0], iceData.features[i].properties.height);
         }
 
         Debug.Log(iceVector[1]);
 
-        linePlot.Plot(iceVector);
+        linePlot.Plot(iceVector, 150);
     }
 }
