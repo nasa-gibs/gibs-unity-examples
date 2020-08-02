@@ -106,6 +106,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662359e9a5b653c46a9c3ec87cd44827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  server: 
+  layer: 
+  format: 
+  styles: 
+  time: 
+  width: 0
+  height: 0
+  projection: 
   material: {fileID: 2100000, guid: 4461c3ed8b5812142b9202c57185a552, type: 2}
 --- !u!54 &2666767512476531535
 Rigidbody:
