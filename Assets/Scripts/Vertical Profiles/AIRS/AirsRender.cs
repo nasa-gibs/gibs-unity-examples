@@ -26,7 +26,7 @@ public class AirsRender : MonoBehaviour
             
             float sphereRadius = GetComponent<SphereCollider>().radius;
             float actualRadius = 3948.8F;
-            float elevationScale = .05F;
+            float elevationScale = .20F;
 
             ColorPoints(airsRenderer, colorValue);
             Vector3 airsCords = Coordinates.LatLongToXYZ(airsData.x[i], airsData.y[i], airsData.z[i], actualRadius, sphereRadius, elevationScale);
