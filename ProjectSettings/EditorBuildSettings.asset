@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/wmts.unity
     guid: 06eb59daf9b258648947e4f48ac8c8fc
+  - enabled: 1
+    path: Assets/Scenes/airs.unity
+    guid: 1a1e52b4bb65b8e4890fdefb613c5c37
+  - enabled: 1
+    path: Assets/Scenes/calipso.unity
+    guid: ce4b3beb5f7ccae4988578ad227ad5af
+  - enabled: 1
+    path: Assets/Scenes/icesat-2.unity
+    guid: 8102caadc15873946afceb5ab3952fe3
   m_configObjects: {}
