@@ -6,9 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/main menu.unity
+    guid: 2c092b14eb86c1e4fac9563950a0b49d
+  - enabled: 1
+    path: Assets/Scenes/mrtk.unity
+    guid: a923fc986372c224c89653348a3c9d4d
+  - enabled: 1
     path: Assets/Scenes/wms.unity
     guid: 17208d46e4915f6489f288d911b4cd68
   - enabled: 1
     path: Assets/Scenes/wmts.unity
     guid: 06eb59daf9b258648947e4f48ac8c8fc
+  - enabled: 1
+    path: Assets/Scenes/airs.unity
+    guid: 1a1e52b4bb65b8e4890fdefb613c5c37
+  - enabled: 1
+    path: Assets/Scenes/calipso.unity
+    guid: ce4b3beb5f7ccae4988578ad227ad5af
+  - enabled: 1
+    path: Assets/Scenes/icesat-2.unity
+    guid: 8102caadc15873946afceb5ab3952fe3
   m_configObjects: {}
