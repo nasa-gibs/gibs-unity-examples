@@ -63,7 +63,9 @@ crashlytics-build.properties
 .DS_Store
 .MSBuildForUnity.Common.props
 MSBuild/
-Assets/Libraries/MRTK
+Assets/Libraries/MRTK/
+Assets/Libraries/MixedRealityToolkit-Unity-main
+Assets/Libraries/MixedRealityToolkit-Unity-main.meta
 MixedRealityToolkit.Providers/
 WindowsMixedReality/Shared/
 DotNetAdapter/.obj
