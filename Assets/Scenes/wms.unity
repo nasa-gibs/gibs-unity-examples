@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d9acc7968244a8886f3af591305bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeProfile: {fileID: 11400000, guid: 31a611a779d3499e8e35f1a2018ca841, type: 2}
+  activeProfile: {fileID: 11400000, guid: 7e7c962b9eb9dfa44993d5b2f2576752, type: 2}
 --- !u!4 &313150245
 Transform:
   m_ObjectHideFlags: 0
@@ -418,6 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf98dd1206224111a38765365e98e207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lockCursorWhenFocusLocked: 1
   setCursorInvisibleWhenFocusLocked: 0
   maxGazeCollisionDistance: 10
   raycastLayerMasks:
@@ -428,7 +429,6 @@ MonoBehaviour:
   gazeTransform: {fileID: 0}
   minHeadVelocityThreshold: 0.5
   maxHeadVelocityThreshold: 2
-  useEyeTracking: 1
 --- !u!114 &1338424238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,7 +480,7 @@ Camera:
   m_GameObject: {fileID: 1338424235}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -750,6 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTetherWhenManipulating: 0
+  IsBoundsHandles: 0
 --- !u!114 &2666767512172792639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -778,22 +779,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
-      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onManipulationEnded:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
-      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
-      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onHoverExited:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
-      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1001 &3262274509993104652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -926,6 +927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTetherWhenManipulating: 0
+  IsBoundsHandles: 0
 --- !u!114 &3262274509993104656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,22 +956,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
-      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onManipulationEnded:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
-      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
-      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onHoverExited:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Microsoft.MixedReality.Toolkit.UI.ManipulationEvent, Microsoft.MixedReality.Toolkit.SDK,
-      Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1001 &9215791363732630429
 PrefabInstance:
   m_ObjectHideFlags: 0

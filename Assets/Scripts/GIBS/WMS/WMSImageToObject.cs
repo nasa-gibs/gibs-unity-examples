@@ -18,6 +18,7 @@ public class WMSImageToObject : MonoBehaviour
     double[] bBox = { -180, -90, 180, 90 };
     public string projection;
     public Material material;
+    
 
     IEnumerator Start()
     {

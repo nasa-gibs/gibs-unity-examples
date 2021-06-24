@@ -29,7 +29,7 @@ public class WMSRequest
     {
         get
         {
-            const string urlTemplate = "{0}/wms/epsg{1}/all/wms.cgi?LAYERS={2}&FORMAT={3}&TRANSPARENT=TRUE&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES={4}&SRS=EPSG%3A{5}&WIDTH={6}&HEIGHT={7}&BBOX={8},{9},{10},{11}&TIME={12}";
+            const string urlTemplate = "{0}/wms/epsg{1}/best/wms.cgi?LAYERS={2}&FORMAT={3}&TRANSPARENT=TRUE&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES={4}&SRS=EPSG%3A{5}&WIDTH={6}&HEIGHT={7}&BBOX={8},{9},{10},{11}&TIME={12}";
             return string.Format(urlTemplate, server, projection, layer, format, styles, projection, width, height, bBox[0], bBox[1], bBox[2], bBox[3], time);
             //https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=MODIS_Terra_SurfaceReflectance_Bands721&STYLES=&FORMAT=image%2Fpng&TRANSPARENT=true&HEIGHT=256&WIDTH=256&TIME=2018-10-01&CRS=EPSG:4326&BBOX=-22.5,0,0,22.5
         }
